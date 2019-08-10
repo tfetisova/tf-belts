@@ -25,10 +25,10 @@ body {
 
 .contact-form {
   position: fixed;
-  display: grid;
   padding: 50px 20px;
   background-color: white;
-  z-index: 3; }
+  z-index: 3;
+  display: none; }
   .contact-form_mobile {
     grid-template-columns: 1fr;
     grid-row-gap: 15px;
@@ -52,6 +52,12 @@ body {
   .contact-form__label {
     font-weight: 600;
     width: 100%; }
+    .contact-form__label--small-italic {
+      font-style: italic;
+      font-size: 12px;
+      margin-left: 5px;
+      color: #abbbbe;
+      font-weight: 300; }
   .contact-form__input-field {
     border: 1px solid #abbbbe;
     padding: 9px;
@@ -65,6 +71,9 @@ body {
   padding-bottom: 15px;
   width: 50%;
   justify-self: center; }
+
+.active-grid {
+  display: grid; }
 
 .page-header {
   /*background-image: url("../img/header-bg.png");*/
@@ -154,3 +163,30 @@ body {
     min-width: 40%;
     font-size: 32px;
     margin-top: 5vh; }
+
+.container-grid {
+  display: grid; }
+
+.logo:link,
+.logo:visited {
+  text-decoration: none;
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
+
+.navigation__menu-icon-sprite {
+  display: block;
+  background-image: url(../img/spritesheet-menu-icons.png);
+  background-repeat: no-repeat; }
+
+.navigation__sprite-mobile-menu {
+  width: 30px;
+  height: 30px;
+  background-position: -30px 0; }
+
+.navigation__sprite-menu-close {
+  width: 30px;
+  height: 30px;
+  background-position: 0 0; }

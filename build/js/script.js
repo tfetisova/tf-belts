@@ -11,3 +11,7 @@ $('.page-header').vide('../video/video.mp4', {
     bgColor: '#000',
     position: '50% 100%',
 });
+$('.order.order_big-btn').click(()=>{$('.contact-form').addClass('active-grid')});
+$('.contact-form__btn-close').click(()=>{
+    $('.contact-form').removeClass('active-grid')
+});
