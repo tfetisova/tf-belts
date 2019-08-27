@@ -228,6 +228,12 @@ body {
   .contact-form__btn-close-icon {
     color: #abbbbe;
     font-size: 32px; }
+  .contact-form__howto-video {
+    max-width: 100%; }
+  .contact-form__howto-measure-text {
+    margin: 15px 0; }
+  .contact-form__howto-list {
+    list-style: square; }
   .contact-form__message {
     text-align: center; }
     .contact-form__message--small-text {
@@ -337,17 +343,31 @@ body {
     margin-bottom: 20px; }
   .belts__description-img {
     width: 100%;
-    height: 200px;
+    height: 300px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; }
+    background-position: center;
+    display: block;
+    margin-bottom: 15px; }
     .belts__description-img--block1 {
       background-image: url("../img/section-belts/200px-height/3belt.jpg"); }
+    .belts__description-img--block1-1 {
+      background-image: url("../img/section-belts/200px-height/structure-1.jpg"); }
     .belts__description-img--block2 {
+      background-image: url("../img/section-belts/200px-height/2belt.jpg"); }
+    .belts__description-img--block2-2 {
       background-image: url("../img/section-belts/200px-height/belt-back-side2.jpg"); }
+    .belts__description-img--block3 {
+      background-image: url("../img/section-belts/200px-height/diagonal.jpg"); }
+    .belts__description-img--block4 {
+      background-image: url("../img/section-belts/thickness.jpg"); }
+    .belts__description-img--block5 {
+      background-image: url("../img/section-belts/200px-height/antistatika.jpg"); }
+    .belts__description-img--block5-1 {
+      background-image: url("../img/section-belts/200px-height/belt-back-side.jpg"); }
 
 .button_btn-more {
   padding: 10px 15px; }
