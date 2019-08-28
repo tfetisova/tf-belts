@@ -229,7 +229,7 @@ body {
     color: #abbbbe;
     font-size: 32px; }
   .contact-form__howto-video {
-    max-width: 100%; }
+    width: 100%; }
   .contact-form__howto-measure-text {
     margin: 15px 0; }
   .contact-form__howto-list {
@@ -341,7 +341,11 @@ body {
   .belts__description-main-text {
     font-size: 16px;
     margin-bottom: 20px; }
-  .belts__description-img {
+
+.slider {
+  width: 100%; }
+  .slider__description-img {
+    display: none;
     width: 100%;
     height: 300px;
     -webkit-background-size: cover;
@@ -350,24 +354,63 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    display: block;
     margin-bottom: 15px; }
-    .belts__description-img--block1 {
+    .slider__description-img--block1 {
       background-image: url("../img/section-belts/200px-height/3belt.jpg"); }
-    .belts__description-img--block1-1 {
+    .slider__description-img--block1-1 {
       background-image: url("../img/section-belts/200px-height/structure-1.jpg"); }
-    .belts__description-img--block2 {
+    .slider__description-img--block2 {
       background-image: url("../img/section-belts/200px-height/2belt.jpg"); }
-    .belts__description-img--block2-2 {
+    .slider__description-img--block2-1 {
       background-image: url("../img/section-belts/200px-height/belt-back-side2.jpg"); }
-    .belts__description-img--block3 {
+    .slider__description-img--block3 {
       background-image: url("../img/section-belts/200px-height/diagonal.jpg"); }
-    .belts__description-img--block4 {
+    .slider__description-img--block4 {
       background-image: url("../img/section-belts/thickness.jpg"); }
-    .belts__description-img--block5 {
+    .slider__description-img--block5 {
       background-image: url("../img/section-belts/200px-height/antistatika.jpg"); }
-    .belts__description-img--block5-1 {
+    .slider__description-img--block5-1 {
       background-image: url("../img/section-belts/200px-height/belt-back-side.jpg"); }
+  .slider__nav-area {
+    position: absolute;
+    height: 100%;
+    width: 15%;
+    background-color: #4e696d;
+    opacity: 0;
+    top: 0; }
+    .slider__nav-area--prev {
+      left: 0; }
+    .slider__nav-area--next {
+      right: 0; }
+  .slider__arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 15px 20px 0;
+    border-color: transparent #43b3c4 transparent transparent;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+    .slider__arrow--prev {
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+      -moz-transform: translate(-50%, -50%) rotate(-45deg);
+      -ms-transform: translate(-50%, -50%) rotate(-45deg);
+      -o-transform: translate(-50%, -50%) rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg); }
+    .slider__arrow--next {
+      right: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(135deg);
+      -moz-transform: translate(-50%, -50%) rotate(135deg);
+      -ms-transform: translate(-50%, -50%) rotate(135deg);
+      -o-transform: translate(-50%, -50%) rotate(135deg);
+      transform: translate(-50%, -50%) rotate(135deg); }
+
+.slide-active {
+  display: block; }
 
 .button_btn-more {
   padding: 10px 15px; }
@@ -392,6 +435,11 @@ body {
 
 .belts > .container {
   position: relative; }
+
+.slider-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%; }
 
 .button_btn-more-howto {
   position: relative;

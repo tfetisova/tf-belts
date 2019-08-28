@@ -1,1 +1,60 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(\'.1a-R\').X(\'../o/o.18\',{17:\'#16\',15:\'14% B%\',});$(\'.13.12-g\').2(()=>{$(\'.a-s\').C(\'7-6\')});$(\'.a-11-u\').2(()=>{$(\'.a-s\').j(\'7-6\')});$(\'.t-Z-4\').2(()=>{$(\'.f-4\').C(\'7-6\').b({y:0,D:1},h)});$(\'.t-4-u\').2(()=>{$(\'.f-4\').b({y:\'-B%\',D:0},h).j(\'7-6\')});$(\'.Q-P-O\').c(\'2\',3(){$(\'w, v\').b({e:$($(d).r(\'q\')).k().5},m);$(\'.f-4\').j(\'7-6\')});I l=$(\'.H-G\').k().5;$(V).F(3(){$(\'.g-x-5\')[\'J\'+($(d).e()>=l?\'L\':\'M\')](h)});$(\'.g-x-5\').c(\'2\',3(){$(\'w, v\').b({e:$($(d).r(\'q\')).k().5+\'N\'},m)});$(\'.8-9-i\').c(\'2\',3(){$(\'.A-z\').S(\'n\',3(){T($(\'.A-z\').U(":E")){$(\'.8-9-i\').p(\'Згорнути\')}W{$(\'.8-9-i\').p(\'Читати далі\')}})});$(\'.8-9-Y\').c(\'2\',()=>{$(\'.a-10-19\').K(\'n\')});',62,73,'||click|function|menu|top|grid|active|button_btn|more|contact|animate|on|this|scrollTop|navigation__main|btn|500|read|removeClass|offset|top200vh|700|slow|video|text|href|attr|form|navigation__sprite|close|body|html|to|left|advantages|belts__rest|100|addClass|opacity|visible|scroll|200vh|border|let|fade|toggle|In|Out|px|link|item|navigation__menu|header|slideToggle|if|is|window|else|vide|howto|mobile|form__howto|form__btn|button_big|button|50|position|000|bgColor|mp4|measure|page'.split('|'),0,{}))
+$('.page-header').vide({
+    mp4: '../video/video.mp4',
+    webm: '../video/video.webm',
+    ogv: '../video/video.ogv',
+    poster: '../video/video.png'
+},{
+    bgColor: '#000',
+    position: '50% 100%',
+});
+$('.button.button_big-btn').click(()=>{$('.contact-form').addClass('active-grid')});
+$('.contact-form__btn-close').click(()=>{
+    $('.contact-form').removeClass('active-grid')
+});
+$('.navigation__sprite-mobile-menu').click(()=>{
+    $('.navigation__main-menu').addClass('active-grid').animate({
+        left:0,
+        opacity:1
+    },500)
+});
+$('.navigation__sprite-menu-close').click(()=>{
+    $('.navigation__main-menu').animate({
+        left:'-100%',
+        opacity:0
+    },500).removeClass('active-grid');
+});
+$('.navigation__menu-item-link').on('click',function () {
+    $('html, body').animate({
+        scrollTop:$($(this).attr('href')).offset().top
+    },700);
+    $('.navigation__main-menu').removeClass('active-grid');
+
+});
+let top200vh=$('.border-200vh').offset().top;
+$(window).scroll(function () {
+    $('.btn-to-top')['fade'+ ($(this).scrollTop() >= top200vh ? 'In': 'Out')](500)
+});
+
+$('.btn-to-top').on('click', function () {
+    $('html, body').animate({
+        scrollTop:$($(this).attr('href')).offset().top+'px'
+    },700);
+});
+$('.button_btn-more-read').on('click', function () {
+    $('.belts__rest-advantages').slideToggle('slow', function () {
+        if($('.belts__rest-advantages').is(":visible")){
+            $('.button_btn-more-read').text('Згорнути')
+        }else{
+            $('.button_btn-more-read').text('Читати далі')
+        }
+    })
+});
+$('.button_btn-more-howto').on('click', ()=>{
+    $('.contact-form__howto-measure').toggle('slow');
+});
+let slide = $('.slider__description-img');
+$('.slider__arrow--next').on('click', ()=>{
+    let nextIndex = (+index+1)%slide.length;
+    $(`.slider__description-img:eq(${nextIndex})`).siblings().removeClass('slide-active');
+    $(`.slider__description-img:eq(${nextIndex})`).addClass('slide-active');
+});
