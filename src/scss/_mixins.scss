@@ -1,0 +1,9 @@
+@mixin flexContainer-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin montserratBold{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}

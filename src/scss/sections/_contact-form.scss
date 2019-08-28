@@ -1,0 +1,83 @@
+.contact-form{
+  padding: 50px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 15px;
+  &_fixed{
+    position: fixed;
+    display: none;
+    z-index: 3;
+  }
+  &_inline{
+    color: #fff;
+  }
+
+  &_mobile{
+    background-color: white;
+    top:0;
+    left:0;
+    width: 100vw;
+  }
+  &__btn-close{
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  &__btn-close-icon{
+    color: $light-text-or-icons ;
+    font-size: 32px;
+  }
+  &__howto-video{
+    width: 100%;
+  }
+  &__howto-measure-text{
+    margin: 15px 0;
+  }
+  &__howto-list{
+    list-style: square;
+  }
+  &__message{
+    text-align: center;
+    &--small-text{
+      font-size: 12px;
+      color: $subtitle-color;
+    }
+    &--small-white-text{
+      color: #fff;
+    }
+
+  }
+  &__label{
+    font-weight: 600;
+    width: 100%;
+    &--small-italic{
+      font-style: italic;
+      font-size: 12px;
+      margin-left: 5px;
+      color: $light-text-or-icons;
+      font-weight: 300;
+    }
+  }
+  &__input-field{
+    border: 1px solid $light-text-or-icons;
+    padding: 9px;
+    width: 100%;
+    display: block;
+  }
+}
+.button{
+  &_send-form{
+    border: none;
+    font-size: 15px;
+    padding-top: 16px;
+    padding-bottom: 15px;
+    width: 50%;
+    justify-self: center;
+
+  }
+}
+.active-grid{
+  display:grid;
+}

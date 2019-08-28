@@ -1,0 +1,188 @@
+.section-title{
+  color: $main-orange;
+  @include montserratBold;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+.section-title:after{
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: $line-after-section-title;
+  top: 80%;
+  left:50%;
+  transform:translateX(-50%);
+
+}
+
+.belts{
+  padding-top: 20px;
+  &__description-container{
+    @include flexContainer-center;
+    flex-direction: column;
+    margin: 20px auto;
+  }
+  &__gradient-cover{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    top:0;
+    left:0;
+    //background-image: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,.1) 85%, rgba(255,255,255,.5) 93%,rgba(255,255,255,1) 100% );
+  }
+  &__description-title{
+    color: $subtitle-color;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__description-main-text{
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}
+.slider{
+  width: 100%;
+  &__description-img{
+    display: none;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 15px;
+    &--body-1{
+      background-image:url("../img/section-belts/200px-height/body-1.jpg");
+    }
+    &--body-2{
+       background-image:url("../img/section-belts/200px-height/body-2.jpg");
+     }
+    &--body-3{
+      background-image:url("../img/section-belts/200px-height/body-3.jpg");
+    }
+    &--body-4{
+      background-image:url("../img/section-belts/200px-height/body-4.jpg");
+    }
+    &--body-5{
+      background-image:url("../img/section-belts/200px-height/body-5.jpg");
+    }
+    &--structure-1{
+      background-image:url("../img/section-belts/200px-height/structure-1.jpg");
+
+    }
+    &--structure-2{
+      background-image:url("../img/section-belts/200px-height/structure-2.jpg");
+
+    }
+    &--structure-3{
+      background-image:url("../img/section-belts/200px-height/structure-3.jpg");
+
+    }
+    &-diagonal-joint-1{
+      background-image: url("../img/section-belts/200px-height/diagonal-joint-1.jpg");
+    }
+    &-diagonal-joint-2{
+      background-image: url("../img/section-belts/200px-height/diagonal-joint-2.jpg");
+    }
+    &-diagonal-joint-3{
+      background-image: url("../img/section-belts/200px-height/diagonal-joint-3.jpg");
+    }
+    &--thickness-1{
+      background-image: url("../img/section-belts/200px-height/thickness-1.jpg");
+    }
+    &--thickness-2{
+      background-image: url("../img/section-belts/200px-height/thickness-2.jpg");
+    }
+    &--antistatika-1{
+       background-image: url("../img/section-belts/200px-height/antistatika-1.jpg");
+     }
+    &--antistatika-2{
+      background-image: url("../img/section-belts/200px-height/antistatika-2.jpg");
+    }
+    &--move-mark-1{
+      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
+    }
+    &--move-mark-2{
+      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
+    }
+    &--move-mark-3{
+      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
+    }
+    &--move-mark-4{
+      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
+    }
+  }
+  &__nav-area{
+    position: absolute;
+    z-index: 5;
+    height: 100%;
+    width: 15%;
+    top:0;
+    &--prev{
+      left:0;
+    }
+    &--next{
+      right: 0;
+    }
+
+  }
+  &__arrow{
+    position: absolute;
+    z-index: 10;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 15px 20px 0;
+    border-color: transparent $light-text-or-icons transparent transparent;
+    &--prev{
+      left:50%;
+      top:50%;
+      transform: translate(-50%, -50%);
+    }
+    &--next{
+      right:50%;
+      top:50%;
+      transform: translate(50%, -50%) rotate(180deg);
+    }
+  }
+}
+.slide-active{
+  display: block;
+}
+.button{
+  &_btn-more{
+    padding: 10px 15px;
+  }
+  &_btn-more-read{
+    width: 50%;
+    position: absolute;
+    bottom: 1%;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  &_btn-more:after{
+    content: '';
+    background-image: url("../img/section-belts/more-icon-white.png");
+    height: 35px;
+    width: 18px;
+    margin-left: 5px;
+
+  }
+}
+.belts>.container{
+  position: relative;
+  padding-bottom: 50px;
+}
+.slider-wrap{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

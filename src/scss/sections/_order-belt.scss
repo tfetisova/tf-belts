@@ -1,0 +1,25 @@
+.button{
+  &_btn-more-howto{
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: $line-after-section-title;
+    font-size: 14px;
+
+  }
+  &_btn-more-howto:after{
+    position: absolute;
+    top:50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+.order-belt{
+  background-color: $subtitle-color;
+
+}
+.order-belt input::placeholder{
+  color: $subtitle-color;
+}

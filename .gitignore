@@ -4,7 +4,3 @@
 node_modules/**/*
 .xml
 package-lock.json
-src/
-psd/
-gulpfile.js
-package.json
