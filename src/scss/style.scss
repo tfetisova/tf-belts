@@ -47,3 +47,12 @@ body{
 @import "sections/belts";
 @import "sections/order-belt";
 @import "sections/delivery";
+.install{
+  padding-bottom: 50px;
+  &__description{
+    padding-bottom: 20px;
+  }
+}
+.install .container{
+  text-align: center;
+}

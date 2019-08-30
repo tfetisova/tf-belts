@@ -520,3 +520,11 @@ body {
 
 .section-title--big:after {
   background-color: transparent; }
+
+.install {
+  padding-bottom: 50px; }
+  .install__description {
+    padding-bottom: 20px; }
+
+.install .container {
+  text-align: center; }
