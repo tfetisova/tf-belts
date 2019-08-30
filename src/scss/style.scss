@@ -36,6 +36,9 @@ body{
 .section{
   padding-top:50px;
   padding-bottom: 30px;
+  &_dark{
+    background-color: $subtitle-color;
+  }
 }
 
 @import "sections/header";
