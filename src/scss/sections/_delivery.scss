@@ -1,0 +1,24 @@
+.delivery{
+  background-image: url("../img/delivery-bg-mobile.jpg");
+  background-size: cover;
+  background-position: right center;
+  background-attachment: fixed;
+  color:#fff;
+  @include montserratBold;
+  padding-top: 50vh;
+  padding-bottom: 50vh;
+}
+.section-title{
+  &--big{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    background-color: rgba(0,0,0,.4);
+    color:#fff;
+    font-size: 32px;
+  }
+  &--big:after{
+    background-color: transparent;
+
+  }
+}
