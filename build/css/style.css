@@ -36,6 +36,8 @@ body {
 .section {
   padding-top: 50px;
   padding-bottom: 30px; }
+  .section_dark {
+    background-color: #4e696d; }
 
 .page-header {
   width: 100%;
@@ -475,9 +477,6 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
-
-.order-belt {
-  background-color: #4e696d; }
 
 .order-belt input::-webkit-input-placeholder {
   color: #4e696d; }
