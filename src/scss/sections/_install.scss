@@ -1,0 +1,33 @@
+.install{
+  padding-bottom: 50px;
+  &__description{
+    padding-bottom: 20px;
+  }
+  &__list-item{
+    padding-left: 20px;
+    align-self: start;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  &__list-item:before{
+    content: "";
+    display: inline-flex;
+    margin-right: 8px;
+    background-image: url('../img/tick.png');
+    width: 15px;
+    height: 15px;
+  }
+  &__call:link,
+  &__call:visited{
+    font-size: 18px;
+    line-height: 1.5;
+    @include montserratBold;
+    text-transform: uppercase;
+    color: $line-after-section-title;
+    text-decoration: none;
+  }
+}
+.install .container{
+  text-align: center;
+}

@@ -52,50 +52,25 @@ $('.button_btn-more-read').on('click', function () {
 $('.button_btn-more-howto').on('click', ()=>{
     $('.contact-form__howto-measure').toggle('slow');
 });
-let sliders = Array.from($('.slider'));
-
-function nextSlide(slider) {
-    let slides = Array.from(slider.children);
-    console.log('slides',slides);
-    let currentSlideIndex = slides.findIndex(item =>{
-        return item.attributes[0].value.split(' ').includes('slide-active');
+$('#pay-when-receive').on('click',()=>{
+    $('.payment__list-item[data-id="pay-when-receive"]').slideToggle('slow', function () {
     });
-    console.log('currentSlideIndex',currentSlideIndex);
-    let nextSlideIndex = (+index+1)%+slides.length;
-    $(`${slider}:eq(${nextSlideIndex})`).siblings().removeClass('slide-active');
-    $(`${slider}:eq(${nextSlideIndex})`).addClass('slide-active');
-
-    // let currentSlide = slides.find($('.slide-active'))
-    // console.log('currentSlide',currentSlide);
-}
-function prevSlide(slider) {
-    let slides = Array.from(slider.children);
-    console.log('slides',slides);
-    let currentSlideIndex = slides.findIndex(item =>{
-        return item.attributes[0].value.split(' ').includes('slide-active');
-    });
-    console.log('currentSlideIndex',currentSlideIndex);
-    let prevSlideIndex = (+index+1)%+slides.length;
-    if (prevSlideIndex){
-        prevSlideIndex -= 1;
-        $(`${slider}:eq(${prevSlideIndex})`).siblings().removeClass('active');
-        $(`${slider}:eq(${prevSlideIndex})`).addClass('slide-active');
-    }  else {
-        prevIndex=slide.length-1;
-        $(`${slider}:eq(${prevSlideIndex})`).siblings().removeClass('active');
-        $(`${slider}:eq(${prevSlideIndex})`).addClass('slide-active');
-    }
-}
-$('.slider__nav-area--next').click(function () {
-    console.log('$(this).parents()',$(this).parents());
 });
-// moveSlide(sliders[0]);
-// let slides = $('.slider__description-img');
-// console.log('slides: ',slides);
-// let currentSlide = 0;
-// $('.slider__nav-area--next').on('click', ()=>{
-//     currentSlide = (currentSlide+1)%slides.length;
-//     console.log('on NEXt click currentSlide - ',currentSlide);
-//     // slide[currentSlide].siblings().removeClass('slide-active');
-//     // slide[currentSlide].addClass('slide-active');
-// });
+$('#pay-cash').on('click',()=>{
+    $('.payment__list-item[data-id="pay-cash"]').slideToggle('slow', function () {
+    });
+});
+$('#pay-bank').on('click',()=>{
+    $('.payment__list-item[data-id="pay-bank"]').slideToggle('slow', function () {
+    });
+});
+$('.trigger-open').on('click',()=>{
+    $('.text-us-viber, .text-us-telegram').show('slow');
+    $('.trigger-close').show('slow');
+    $('.trigger-open').hide();
+});
+$('.trigger-close').on('click',()=>{
+    $('.text-us-viber, .text-us-telegram').hide('slow');
+    $('.trigger-open').show();
+    $('.trigger-close').hide();
+});

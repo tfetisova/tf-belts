@@ -1,7 +1,7 @@
 .section-title{
   color: $main-orange;
   @include montserratBold;
-  font-size: 24px;
+  font-size: 32px;
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 30px;
@@ -17,11 +17,9 @@
   top: 80%;
   left:50%;
   transform:translateX(-50%);
-
 }
 
 .belts{
-  padding-top: 20px;
   &__description-container{
     @include flexContainer-center;
     flex-direction: column;

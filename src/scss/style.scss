@@ -29,13 +29,40 @@ body{
 .btn-to-top{
   position: fixed;
   left: 10px;
-  bottom: 10px;
+  bottom: 20px;
   display: none;
 
 }
+.text-us{
+  position: fixed;
+  right: 10px;
+  bottom: 20px;
+  z-index: 11;
+}
+.text-us-telegram{
+  background-color: #3e99d8;
+}
+.text-us-viber{
+  background-color: #665cac;
+}
+
+.text-us-icon{
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 7px;
+}
+.text-us-icon>a{
+  width: 54px;
+  height: 54px;
+  @include flexContainer-center;
+}
+.trigger-close{
+  z-index: 12;
+}
 .section{
-  padding-top:50px;
-  padding-bottom: 30px;
+  padding-top:60px;
+  padding-bottom: 40px;
   &_dark{
     background-color: $subtitle-color;
   }
@@ -47,12 +74,6 @@ body{
 @import "sections/belts";
 @import "sections/order-belt";
 @import "sections/delivery";
-.install{
-  padding-bottom: 50px;
-  &__description{
-    padding-bottom: 20px;
-  }
-}
-.install .container{
-  text-align: center;
-}
+@import "sections/install";
+@import "sections/payment";
+@import "sections/contacts";

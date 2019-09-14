@@ -31,7 +31,7 @@
       width:100%;
       background-color: #fff;
       grid-template-columns: 1fr;
-      z-index: 5;
+      z-index: 11;
       box-shadow: 0 6px 25px 0 $subtitle-color;
     }
     &__menu-icon-sprite{
@@ -62,7 +62,8 @@
       display: block;
       color: $subtitle-color;
       text-decoration: none;
-      padding: 10px 5px;
+      padding: 20px 5px;
+      font-size: 16px;
       text-transform: uppercase;
       font-weight: 500;
       font-family: 'Montserrat', sans-serif;
