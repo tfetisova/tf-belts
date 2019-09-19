@@ -1,36 +1,38 @@
-<html lang="ua">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0, user-scalable=yes maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Полотна для бігових доріжок</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha256-7VVaJ5GDwFQiLIc+eNksQLUSSY5JNZtqv9o2BI8UGYg=" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Montserrat:400,500,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha256-nXBV7Gr2lU0t+AwKsnS05DYtzZ81oYTXS6kj7LBQHfM=" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
 
+    <link rel="stylesheet" href="build/video/vidbg.css">
     <link rel="stylesheet" href="build/css/style.css">
+    <link rel="stylesheet" href="build/css/media450.css" media="(min-width: 450px)">
+    <link rel="stylesheet" href="build/css/media750.css" media="(min-width: 750px)">
 </head>
 <body>
 <div class="page-wrap">
-<header class="page-header" id="page-header" data-vide-bg="build/video/video">
+<header class="page-header" id="page-header">
     <div class="container">
         <h1 class="page-header__title"><span class="page-header__text page-header__text--yellow-text">Полотно</span>  для бігової доріжки</h1>
-        <a href="#" class="button button_big-btn">Замовити</a>
-        <a href="#main-content" class="page-header__scroll"></a>
+        <button type="button" class="button button_big-btn">Замовити</button>
+        <a href="#main-content" class="page-header__scroll"><div class="page-header__scroll-arrow"></div></a>
     </div>
 </header>
 <main class="main-content" id="main-content">
     <section class="navigation">
-        <div class="container container_grid container_grid-3columns">
-            <a href="#" class="logo">
-                <img src="build/img/logo.png" alt="tf-belts logo" width="145">
-            </a>
+
+        <div class="container container_grid container_menu-grid">
+
+            <img class="logo" src="build/img/logo.png" alt="tf-belts logo" width="145">
+
             <span class="navigation__menu-icon-sprite navigation__sprite-mobile-menu">
             </span>
             <nav class="navigation__main-menu">
@@ -46,39 +48,32 @@
             </nav>
 
 
-            <a href="tel:+38(044)383-16-77" class="navigation__call">
-                <i class="navigation__call-icon fas fa-phone"></i>
-            </a>
+            <div class="navigation__call navigation__phone-marker">
+                <i class="navigation__call-icon fas fa-phone navigation__phone-marker"></i>
+                <div class="navigation__call-arrow navigation__call-arrow--down navigation__phone-marker"></div>
+                <ul class="navigation__phone-numbers navigation__phone-marker">
+                    <li class="navigation__phone-list-item navigation__phone-marker"><a class="navigation__phone" href="tel:+38(044)383-16-77">+38(044)383-16-77</a></li>
+                    <li class="navigation__phone-list-item navigation__phone-marker"><a class="navigation__phone" href="tel:+38(095)855-00-83">+38(095)855-00-83</a></li>
+                </ul>
+            </div>
 
         </div>
 
     </section>
     <section class="belts section" id="belts">
-        <div class="container container_grid">
+        <div class="container">
             <h2 class="section-title">Полотна</h2>
             <div class="belts__description-container">
                 <div class="belts__description-text">
-                    <h3 class="belts__description-title">Склад
-                    </h3>
+                    <h3 class="belts__description-title">Склад</h3>
                     <p class="belts__description-main-text">Стандартне полотно - це основа з ПВХ і верхнього ребристого шару виготовленого з гуми або поліуретану, яка має закільцьовану форму з косим з'єднувальним швом і антистатичними нитками.</p>
                 </div>
-                <div class="slider-wrap">
-                <ul class="slider">
-                    <li class="slider__description-img slider__description-img--body-1 slide-active"></li>
-                    <li class="slider__description-img slider__description-img--body-2"></li>
-                    <li class="slider__description-img slider__description-img--body-3"></li>
-                    <li class="slider__description-img slider__description-img--body-4"></li>
-                    <li class="slider__description-img slider__description-img--body-5"></li>
-                </ul>
-                    <div class="slider__nav-area slider__nav-area--prev">
-                        <span class="slider__arrow slider__arrow--prev"></span></div>
-                    <div class="slider__nav-area slider__nav-area--next">
-                        <span class="slider__arrow slider__arrow--next"></span></div>
+                <div id="body">
 
+                        <img src="build/img/section-belts/200px-height/body-1.jpg" alt="" class="belts__slide-img">
 
 
                 </div>
-
             </div>
             <div class="belts__rest-advantages" style="display: none">
 
@@ -199,29 +194,29 @@
 
 <div class="payment__list">
     <!--style="display: none"-->
-    <div class="payment__types">
-        <div class="payment__more-icon">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 438.533 438.533" fill="#f1ad1d" xml:space="preserve"><g><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062C438.533,179.485,428.732,142.795,409.133,109.203z M347.179,237.539c0,4.948-1.811,9.236-5.428,12.847c-3.62,3.614-7.901,5.428-12.847,5.428h-73.091v73.084c0,4.948-1.813,9.232-5.428,12.854c-3.613,3.613-7.897,5.421-12.847,5.421h-36.543c-4.948,0-9.231-1.808-12.847-5.421c-3.617-3.621-5.426-7.905-5.426-12.854v-73.084h-73.089c-4.948,0-9.229-1.813-12.847-5.428c-3.616-3.61-5.424-7.898-5.424-12.847v-36.547c0-4.948,1.809-9.231,5.424-12.847c3.617-3.617,7.898-5.426,12.847-5.426h73.092v-73.089c0-4.949,1.809-9.229,5.426-12.847c3.616-3.616,7.898-5.424,12.847-5.424h36.547c4.948,0,9.233,1.809,12.847,5.424c3.614,3.617,5.428,7.898,5.428,12.847v73.089h73.084c4.948,0,9.232,1.809,12.847,5.426c3.617,3.615,5.428,7.898,5.428,12.847V237.539z"/></g>
+    <div class="payment__types" id="pay-when-receive">
+
+        <span class="payment__bold-span payment__pay-item" ><div class="payment__more-icon">
+            <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 438.533 438.533" fill="#f1ad1d" xml:space="preserve"><g><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062C438.533,179.485,428.732,142.795,409.133,109.203z M347.179,237.539c0,4.948-1.811,9.236-5.428,12.847c-3.62,3.614-7.901,5.428-12.847,5.428h-73.091v73.084c0,4.948-1.813,9.232-5.428,12.854c-3.613,3.613-7.897,5.421-12.847,5.421h-36.543c-4.948,0-9.231-1.808-12.847-5.421c-3.617-3.621-5.426-7.905-5.426-12.854v-73.084h-73.089c-4.948,0-9.229-1.813-12.847-5.428c-3.616-3.61-5.424-7.898-5.424-12.847v-36.547c0-4.948,1.809-9.231,5.424-12.847c3.617-3.617,7.898-5.426,12.847-5.426h73.092v-73.089c0-4.949,1.809-9.229,5.426-12.847c3.616-3.616,7.898-5.424,12.847-5.424h36.547c4.948,0,9.233,1.809,12.847,5.424c3.614,3.617,5.428,7.898,5.428,12.847v73.089h73.084c4.948,0,9.232,1.809,12.847,5.426c3.617,3.615,5.428,7.898,5.428,12.847V237.539z"/></g>
             </svg>
-        </div>
-        <span class="payment__bold-span" id="pay-when-receive">Оплата при отриманні</span>
+        </div>Оплата при отриманні</span>
     </div>
     <p class="payment__list-item" style="display: none" data-id="pay-when-receive">Оплата товару здійснюється в момент отримання покупцем замовленого товару на складі вантажоперевізника у Вашому місті, перевірка його якості, або після доставки кур'єром.</p>
-    <div class="payment__types">
-        <div class="payment__more-icon">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 438.533 438.533" fill="#f1ad1d" xml:space="preserve"><g><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062C438.533,179.485,428.732,142.795,409.133,109.203z M347.179,237.539c0,4.948-1.811,9.236-5.428,12.847c-3.62,3.614-7.901,5.428-12.847,5.428h-73.091v73.084c0,4.948-1.813,9.232-5.428,12.854c-3.613,3.613-7.897,5.421-12.847,5.421h-36.543c-4.948,0-9.231-1.808-12.847-5.421c-3.617-3.621-5.426-7.905-5.426-12.854v-73.084h-73.089c-4.948,0-9.229-1.813-12.847-5.428c-3.616-3.61-5.424-7.898-5.424-12.847v-36.547c0-4.948,1.809-9.231,5.424-12.847c3.617-3.617,7.898-5.426,12.847-5.426h73.092v-73.089c0-4.949,1.809-9.229,5.426-12.847c3.616-3.616,7.898-5.424,12.847-5.424h36.547c4.948,0,9.233,1.809,12.847,5.424c3.614,3.617,5.428,7.898,5.428,12.847v73.089h73.084c4.948,0,9.232,1.809,12.847,5.426c3.617,3.615,5.428,7.898,5.428,12.847V237.539z"/></g>
+    <div class="payment__types" id="pay-cash">
+
+        <span class="payment__bold-span payment__pay-item" ><div class="payment__more-icon">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 438.533 438.533" fill="#f1ad1d" xml:space="preserve"><g><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062C438.533,179.485,428.732,142.795,409.133,109.203z M347.179,237.539c0,4.948-1.811,9.236-5.428,12.847c-3.62,3.614-7.901,5.428-12.847,5.428h-73.091v73.084c0,4.948-1.813,9.232-5.428,12.854c-3.613,3.613-7.897,5.421-12.847,5.421h-36.543c-4.948,0-9.231-1.808-12.847-5.421c-3.617-3.621-5.426-7.905-5.426-12.854v-73.084h-73.089c-4.948,0-9.229-1.813-12.847-5.428c-3.616-3.61-5.424-7.898-5.424-12.847v-36.547c0-4.948,1.809-9.231,5.424-12.847c3.617-3.617,7.898-5.426,12.847-5.426h73.092v-73.089c0-4.949,1.809-9.229,5.426-12.847c3.616-3.616,7.898-5.424,12.847-5.424h36.547c4.948,0,9.233,1.809,12.847,5.424c3.614,3.617,5.428,7.898,5.428,12.847v73.089h73.084c4.948,0,9.232,1.809,12.847,5.426c3.617,3.615,5.428,7.898,5.428,12.847V237.539z"/></g>
             </svg>
-        </div>
-        <span class="payment__bold-span" id="pay-cash">Готівкова</span>
+        </div>Готівкова</span>
     </div>
 
     <p class="payment__list-item" style="display: none" data-id="pay-cash">Оплата готівкою можлива при покупці в нашому магазині в Києві (Харківське шосе, 19).</p>
-    <div class="payment__types">
+    <div class="payment__types" id="pay-bank">
         <div class="payment__more-icon">
-            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="30px" height="30px" viewBox="0 0 438.533 438.533" fill="#f1ad1d" xml:space="preserve"><g><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062C438.533,179.485,428.732,142.795,409.133,109.203z M347.179,237.539c0,4.948-1.811,9.236-5.428,12.847c-3.62,3.614-7.901,5.428-12.847,5.428h-73.091v73.084c0,4.948-1.813,9.232-5.428,12.854c-3.613,3.613-7.897,5.421-12.847,5.421h-36.543c-4.948,0-9.231-1.808-12.847-5.421c-3.617-3.621-5.426-7.905-5.426-12.854v-73.084h-73.089c-4.948,0-9.229-1.813-12.847-5.428c-3.616-3.61-5.424-7.898-5.424-12.847v-36.547c0-4.948,1.809-9.231,5.424-12.847c3.617-3.617,7.898-5.426,12.847-5.426h73.092v-73.089c0-4.949,1.809-9.229,5.426-12.847c3.616-3.616,7.898-5.424,12.847-5.424h36.547c4.948,0,9.233,1.809,12.847,5.424c3.614,3.617,5.428,7.898,5.428,12.847v73.089h73.084c4.948,0,9.232,1.809,12.847,5.426c3.617,3.615,5.428,7.898,5.428,12.847V237.539z"/></g>
+            <svg class="payment__more" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 438.533 438.533" fill="#f1ad1d" xml:space="preserve"><g><path d="M409.133,109.203c-19.608-33.592-46.205-60.189-79.798-79.796C295.736,9.801,259.058,0,219.273,0c-39.781,0-76.47,9.801-110.063,29.407c-33.595,19.604-60.192,46.201-79.8,79.796C9.801,142.8,0,179.489,0,219.267c0,39.78,9.804,76.463,29.407,110.062c19.607,33.592,46.204,60.189,79.799,79.798c33.597,19.605,70.283,29.407,110.063,29.407s76.47-9.802,110.065-29.407c33.593-19.602,60.189-46.206,79.795-79.798c19.603-33.596,29.403-70.284,29.403-110.062C438.533,179.485,428.732,142.795,409.133,109.203z M347.179,237.539c0,4.948-1.811,9.236-5.428,12.847c-3.62,3.614-7.901,5.428-12.847,5.428h-73.091v73.084c0,4.948-1.813,9.232-5.428,12.854c-3.613,3.613-7.897,5.421-12.847,5.421h-36.543c-4.948,0-9.231-1.808-12.847-5.421c-3.617-3.621-5.426-7.905-5.426-12.854v-73.084h-73.089c-4.948,0-9.229-1.813-12.847-5.428c-3.616-3.61-5.424-7.898-5.424-12.847v-36.547c0-4.948,1.809-9.231,5.424-12.847c3.617-3.617,7.898-5.426,12.847-5.426h73.092v-73.089c0-4.949,1.809-9.229,5.426-12.847c3.616-3.616,7.898-5.424,12.847-5.424h36.547c4.948,0,9.233,1.809,12.847,5.424c3.614,3.617,5.428,7.898,5.428,12.847v73.089h73.084c4.948,0,9.232,1.809,12.847,5.426c3.617,3.615,5.428,7.898,5.428,12.847V237.539z"/></g>
             </svg>
         </div>
-        <span class="payment__bold-span" id="pay-bank">Безготівкова</span>
+        <span class="payment__bold-span payment__pay-item" >Безготівкова</span>
     </div>
 
     <p class="payment__list-item" style="display: none" data-id="pay-bank">Оплата за безготівковим розрахунком здійснюється наступним способом: після оформлення замовлення, менеджер магазину електронною поштою надішле Вам рахунок-фактуру, який Ви зможете оплатити в касі відділення будь-якого банку або з розрахункового рахунку Вашої фірми.</p>
@@ -229,6 +224,29 @@
 
         </div>
     </section>
+    <section class="section gallery">
+        <div class="container gallery__container">
+            <div class="gallery__img-container">
+                <img src="build/img/section-belts/200px-height/antistatika-1.jpg" alt="" class="gallery__img">
+            </div>
+            <div class="gallery__img-container">
+                <img src="build/img/section-belts/200px-height/antistatika-2.jpg" alt="" class="gallery__img">
+            </div>
+            <div class="gallery__img-container">
+                <img src="build/img/section-belts/200px-height/body-1.jpg" alt="" class="gallery__img">
+            </div>
+            <div class="gallery__img-container">
+                <img src="build/img/section-belts/200px-height/body-2.jpg" alt="" class="gallery__img">
+            </div>
+            <div class="gallery__img-container"></div>
+
+
+
+
+        </div>
+    </section>
+
+
     <section class="contacts section" id="contacts">
         <div class="container">
             <h2 class="section-title">Контакти</h2>
@@ -237,7 +255,7 @@
                     <li class="contacts__item"><a class="contacts__link contacts__link--mob" href="tel:095-855-00-83">095-855-00-83</a></li>
                     <li class="contacts__item"><a class="contacts__link contacts__link--mob" href="tel:099-111-49-78">099-111-49-78</a></li>
                     <li class="contacts__item"><a class="contacts__link contacts__link--mob" href="tel:067-961-80-96">067-961-80-96</a></li>
-                    <li class="contacts__item"><a href="https://goo.gl/maps/bTtPgo9y619AuazE6"class="contacts__link contacts__link--address">г.Киев, Харьковское Шоссе, 19</a></li>
+                    <li class="contacts__item"><a href="https://goo.gl/maps/bTtPgo9y619AuazE6" class="contacts__link contacts__link--address">г.Киев, Харьковское Шоссе, 19</a></li>
                     <li class="contacts__item contacts__item--map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.492742127204!2d30.632125315159506!3d50.43192197947278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c56ab286d3af%3A0xc35fa11b3bf20f3e!2z0KLQtdGF0L3QvtGE0LjRgtC90LXRgQ!5e0!3m2!1sru!2sua!4v1568457831428!5m2!1sru!2sua"  height="300" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </li>
@@ -247,37 +265,57 @@
     </section>
 
 </main>
-<form class="contact-form contact-form_mobile contact-form_fixed">
-    <button class="contact-form__btn-close"><i class="contact-form__btn-close-icon fas fa-times"></i></button>
-    <p class="contact-form__message">Будь ласка, вкажіть Ваше ім'я та номер телефону для зв'язку:</p>
-    <label class="contact-form__label">
-        <input class="contact-form__input-field" type="text" placeholder="Ім'я:" required>
-    </label>
-    <label class="contact-form__label">
-        <input class="contact-form__input-field" type="tel" pattern="[0-9]{10}" required placeholder="0443831677">
-    </label>
-    <label for="treadmill-brand" class="contact-form__label">Оберіть марку бігової доріжки</label>
-    <select class="contact-form__input-field" name="treadmill-brand" id="treadmill-brand">
-        <option value="LF">Life Fitness</option>
-        <option value="Precor">Precor</option>
-        <option value="Star Trac">Star Trac</option>
-        <option value="Technogym">Technogym</option>
-        <option value="Sports Art">Sports Art</option>
-        <option value="Cybex">Cybex</option>
-        <option value="Cybex">Інший бренд</option>
-    </select>
-    <label for="treadmill-model" class="contact-form__label">Вкажіть модель бігової доріжки або розмір полотна <span class="contact-form__label--small-italic">(необов'язково)</span></label>
-    <input class="contact-form__input-field" type="text" placeholder="Наприклад, 95T achive або 60*3400мм" id="treadmill-model">
-    <p class="contact-form__message contact-form__message--small-text">Після заповнення цієї форми з Вами зв'яжеться менеджер компанії у найближчий робочий час.</p>
-    <p class="contact-form__message contact-form__message--small-text">пн-пт: 9:00-21:00, сб: 10:00-16:00.</p>
-    <button type="submit" class="button button_send-form">Надіслати</button>
+    <div class="contact-form_fixed">
+        <div class="contact-form contact-form_mobile">
+        <button class="contact-form__btn-close"><i class="contact-form__btn-close-icon fas fa-times"></i></button>
+        <p class="contact-form__message">Будь ласка, вкажіть Ваше ім'я та номер телефону для зв'язку:</p>
+        <label class="contact-form__label">
+            <input class="contact-form__input-field" type="text" placeholder="Ім'я:" required>
+        </label>
+        <label class="contact-form__label">
+            <input class="contact-form__input-field" type="tel" pattern="[0-9]{10}" required placeholder="0443831677">
+        </label>
+        <label for="treadmill-brand" class="contact-form__label">Оберіть марку бігової доріжки</label>
+        <select class="contact-form__input-field" name="treadmill-brand" id="treadmill-brand">
+            <option value="LF">Life Fitness</option>
+            <option value="Precor">Precor</option>
+            <option value="Star Trac">Star Trac</option>
+            <option value="Technogym">Technogym</option>
+            <option value="Sports Art">Sports Art</option>
+            <option value="Cybex">Cybex</option>
+            <option value="Johnson">Johnson</option>
+            <option value="Circle">Circle</option>
+            <option value="Sports Art">Sports Art</option>
+            <option value="FitEx">FitEx</option>
+            <option value="Spirit">Spirit</option>
+            <option value="Nordic Track">Nordic Track</option>
+            <option value="BH Fitnes">BH Fitnes</option>
+            <option value="Kettler">Kettler</option>
+            <option value="Pro-Form">Pro-Form</option>
+            <option value="Matrix">Matrix</option>
+            <option value="Aerofit">Aerofit</option>
+            <option value="TORNEO">TORNEO</option>
+            <option value="Discovery">Discovery</option>
+            <option value="Jada Fitness">Jada Fitness</option>
+            <option value="VIGOR">VIGOR</option>
+            <option value="JKEXER">JKEXER</option>
+            <option value="USA Style">USA Style</option>
+            <option value="Other">Інший бренд</option>
+        </select>
+        <label for="treadmill-model" class="contact-form__label">Вкажіть модель бігової доріжки або розмір полотна <span class="contact-form__label--small-italic">(необов'язково)</span></label>
+        <input class="contact-form__input-field" type="text" placeholder="Наприклад, 95T achive або 60*3400мм" id="treadmill-model">
+        <p class="contact-form__message contact-form__message--small-text">Після заповнення цієї форми з Вами зв'яжеться менеджер компанії у найближчий робочий час.</p>
+        <p class="contact-form__message contact-form__message--small-text">пн-пт: 9:00-21:00, сб: 10:00-16:00.</p>
+        <button type="submit" class="button button_send-form">Надіслати</button>
 
-</form>
+    </div>
+    </div>
+
 
 
 <div class="border-200vh"></div>
 <a href="#page-header" class="btn-to-top">
-    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="54px" height="54px" fill="#f1ad1d" viewBox="0 0 438.533 438.533"
 	 xml:space="preserve">
 <g>
@@ -332,12 +370,7 @@
         crossorigin="anonymous">
 
 </script>
-<script
-        src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-        integrity="sha256-pTxD+DSzIwmwhOqTFN+DB+nHjO4iAsbgfyFq5K5bcE0="
-        crossorigin="anonymous"></script>
-
-<script src="build/js/jquery.vide.min.js"></script>
+<script src="build/video/vidbg.js"></script>
 <script src="build/js/script.js"></script>
 </body>
 </html>

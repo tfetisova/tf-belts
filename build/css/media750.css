@@ -1,0 +1,16 @@
+html {
+  font-size: 14px; }
+
+.page-header__title {
+  margin-top: 20vh; }
+
+.contact-form {
+  padding-top: 40px;
+  padding-bottom: 20px; }
+  .contact-form_fixed {
+    background-color: rgba(21, 48, 54, 0.5);
+    justify-items: center; }
+  .contact-form_mobile {
+    width: 50vw; }
+  .contact-form__btn-close {
+    top: 5px; }

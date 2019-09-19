@@ -32,7 +32,6 @@
     z-index: 10;
     top:0;
     left:0;
-    //background-image: linear-gradient(to bottom, transparent 0%, rgba(255,255,255,.1) 85%, rgba(255,255,255,.5) 93%,rgba(255,255,255,1) 100% );
   }
   &__description-title{
     color: $subtitle-color;
@@ -46,20 +45,16 @@
     font-size: 16px;
     margin-bottom: 20px;
   }
-}
-.slider{
-  width: 100%;
-  &__description-img{
-    display: none;
+  &__slide-img{
     width: 100%;
-    height: 300px;
+  }
+}
+.description-img{
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin-bottom: 15px;
-    &--body-1{
-      background-image:url("../img/section-belts/200px-height/body-1.jpg");
-    }
     &--body-2{
        background-image:url("../img/section-belts/200px-height/body-2.jpg");
      }
@@ -118,43 +113,7 @@
       background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
     }
   }
-  &__nav-area{
-    position: absolute;
-    z-index: 5;
-    height: 100%;
-    width: 15%;
-    top:0;
-    &--prev{
-      left:0;
-    }
-    &--next{
-      right: 0;
-    }
 
-  }
-  &__arrow{
-    position: absolute;
-    z-index: 10;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 20px 15px 20px 0;
-    border-color: transparent $light-text-or-icons transparent transparent;
-    &--prev{
-      left:50%;
-      top:50%;
-      transform: translate(-50%, -50%);
-    }
-    &--next{
-      right:50%;
-      top:50%;
-      transform: translate(50%, -50%) rotate(180deg);
-    }
-  }
-}
-.slide-active{
-  display: block;
-}
 .button{
   &_btn-more{
     padding: 10px 15px;
@@ -178,9 +137,4 @@
 .belts>.container{
   position: relative;
   padding-bottom: 50px;
-}
-.slider-wrap{
-  position: relative;
-  width: 100%;
-  height: 100%;
 }

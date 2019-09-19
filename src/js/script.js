@@ -1,16 +1,28 @@
-$('.page-header').vide({
+let instance = new vidbg('.page-header', {
     mp4: '../video/video.mp4',
     webm: '../video/video.webm',
-    ogv: '../video/video.ogv',
-    poster: '../video/video.png'
-},{
-    bgColor: '#000',
-    position: '50% 100%',
+    poster: '../video/video.png', // URL or relative path to fallback image
+    overlay: false // Boolean to display the overlay or not
+}, {
+    // Attributes
 });
-$('.button.button_big-btn').click(()=>{$('.contact-form').addClass('active-grid')});
+$('.button.button_big-btn').click(()=>{$('.contact-form_fixed').addClass('active-grid')});
 $('.contact-form__btn-close').click(()=>{
-    $('.contact-form').removeClass('active-grid')
+    $('.contact-form_fixed').removeClass('active-grid')
 });
+$('body').click((e)=> {
+    console.log(e.target.classList);
+    if (e.target.classList.contains('contact-form_fixed')) {
+        $('.contact-form_fixed').removeClass('active-grid')
+    }
+    if (!e.target.classList.contains('navigation__phone-marker')) {
+        $('.navigation__phone-numbers').hide()
+    }
+});
+$('.button.button_send-form').click(()=>{
+    $('.contact-form_fixed').removeClass('active-grid')
+});
+
 $('.navigation__sprite-mobile-menu').click(()=>{
     $('.navigation__main-menu').addClass('active-grid').animate({
         left:0,
@@ -30,6 +42,23 @@ $('.navigation__menu-item-link').on('click',function () {
     $('.navigation__main-menu').removeClass('active-grid');
 
 });
+$('.navigation__call').click(()=>{
+    $('.navigation__phone-numbers').toggle('slow', function () {
+        if($('.navigation__phone-numbers').is(":visible")){
+            $('.navigation__call').addClass('navigation__call-hover')
+            $('.navigation__call-arrow').removeClass('navigation__call-arrow--down');
+            $('.navigation__call-arrow').addClass('navigation__call-arrow--up');
+            $('.navigation__call-arrow').addClass('navigation__call-hover');
+
+        }else{
+            $('.navigation__call').removeClass('navigation__call-hover')
+            $('.navigation__call-arrow').addClass('navigation__call-arrow--down');
+            $('.navigation__call-arrow').removeClass('navigation__call-arrow--up');
+
+        }
+    });
+});
+
 let top200vh=$('.border-200vh').offset().top;
 $(window).scroll(function () {
     $('.btn-to-top')['fade'+ ($(this).scrollTop() >= top200vh ? 'In': 'Out')](500)
@@ -52,18 +81,29 @@ $('.button_btn-more-read').on('click', function () {
 $('.button_btn-more-howto').on('click', ()=>{
     $('.contact-form__howto-measure').toggle('slow');
 });
-$('#pay-when-receive').on('click',()=>{
-    $('.payment__list-item[data-id="pay-when-receive"]').slideToggle('slow', function () {
+if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){
+    console.log(navigator.userAgent);
+    $('#pay-bank').on('touchstart', ()=>{
+        $('.payment__list-item[data-id="pay-bank"]').slideToggle();
     });
-});
-$('#pay-cash').on('click',()=>{
-    $('.payment__list-item[data-id="pay-cash"]').slideToggle('slow', function () {
+    $('#pay-when-receive').on('touchstart',()=>{
+        $('.payment__list-item[data-id="pay-when-receive"]').slideToggle();
     });
-});
-$('#pay-bank').on('click',()=>{
-    $('.payment__list-item[data-id="pay-bank"]').slideToggle('slow', function () {
+    $('#pay-cash').on('touchstart',()=>{
+        $('.payment__list-item[data-id="pay-cash"]').slideToggle();
     });
-});
+}else{
+    $('#pay-bank').on('click',()=>{
+        $('.payment__list-item[data-id="pay-bank"]').slideToggle();
+    });
+    $('#pay-when-receive').on('click',()=>{
+        $('.payment__list-item[data-id="pay-when-receive"]').slideToggle();
+    });
+    $('#pay-cash').on('click',()=>{
+        $('.payment__list-item[data-id="pay-cash"]').slideToggle();
+    });
+}
+
 $('.trigger-open').on('click',()=>{
     $('.text-us-viber, .text-us-telegram').show('slow');
     $('.trigger-close').show('slow');

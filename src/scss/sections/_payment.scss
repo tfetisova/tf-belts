@@ -2,17 +2,22 @@
   color: #fff;
   &__bold-span{
     font-weight: bold;
-    font-size: 18px;
-
+    font-size: 20px;
+  }
+  &__pay-item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
   &__types{
     display: flex;
     align-items: center;
-    padding-left: 20px;
-    margin-bottom: 20px;
+    padding: 20px;
   }
   &__more-icon{
     margin-right: 15px;
+
   }
   &__list{
     display: flex;
@@ -20,7 +25,6 @@
     width: 100%;
     justify-content: center;
   }
-
   &__list-item{
     margin-bottom: 20px;
     padding-left: 40px;

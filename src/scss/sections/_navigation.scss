@@ -2,7 +2,7 @@
   &_grid {
     display: grid;
   }
-  &_grid-3columns{
+  &_menu-grid{
     padding-top: 10px;
     padding-bottom: 10px;
     grid-template-columns: 1fr 4fr 1fr;
@@ -12,17 +12,16 @@
     grid-gap: 10px;
   }
 }
-  .logo:link,
-  .logo:visited{
-    text-decoration: none;
+  .logo{
     order: 1;
   }
   .navigation{
     border-bottom: .8px solid $light-text-or-icons;
     border-top: .8px solid $light-text-or-icons;
     position: relative;
+
     &__main-menu{
-      padding: 20px 15px 40px;
+      padding: 20px 15px 0;
       display: none;
       position: absolute;
       top:0;
@@ -50,13 +49,63 @@
       height: 30px;
       background-position: 0 0;
       justify-self: end;
-
     }
     &__call{
+      position: relative;
+      display: flex;
+      padding: 5px;
+      align-items: center;
       order: 2;
       font-size: 24px;
       color: $subtitle-color;
     }
+    &__call-hover{
+      color: $line-after-section-title;
+    }
+    &__call-arrow{
+      margin-left: 7px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      &--down{
+        border-width: 5px 2.5px 0 2.5px;
+        border-color: $subtitle-color transparent transparent transparent;
+      }
+      &--up{
+        border-width: 0 2.5px 5px 2.5px;
+        border-color: transparent transparent $subtitle-color transparent;
+
+      }
+    }
+    &__call-arrow.navigation__call-hover{
+      border-bottom-color: $line-after-section-title;
+    }
+    &__phone-numbers{
+      box-shadow: 0 6px 25px 0 $subtitle-color;
+      border-radius: 5px;
+      padding: 15px;
+      display: none;
+      position: absolute;
+      top:100%;
+      right: 0;
+      font-size: 16px;
+      width:80vw;
+      background-color: #fff;
+      grid-template-columns: 1fr;
+      z-index: 11;
+
+    }
+    &__phone:link,
+    &__phone:visited{
+      color: $line-after-section-title;
+      display: block;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-decoration: none;
+    }
+    &__phone-list-item:first-child{
+      border-bottom: 1px solid $light-text-or-icons;;
+  }
     &__menu-item-link:link,
     &__menu-item-link:visited{
       display: block;
@@ -72,7 +121,6 @@
     &__menu-item-link:hover,
     &__menu-item-link:active{
       color: $main-orange;
-
     }
   }
 

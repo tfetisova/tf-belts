@@ -1,0 +1,22 @@
+html{
+  font-size: 14px;
+}
+.page-header{
+  &__title{
+    margin-top: 20vh;
+  }
+}
+.contact-form{
+  padding-top: 40px;
+  padding-bottom: 20px;
+  &_fixed{
+    background-color: rgba(21,48,54, .5);
+    justify-items: center;
+  }
+  &_mobile{
+    width: 50vw;
+  }
+  &__btn-close{
+    top:5px;
+  }
+}

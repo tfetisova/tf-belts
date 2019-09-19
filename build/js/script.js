@@ -1,1 +1,116 @@
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('$(\'.1t-17\').1c({J:\'../4/4.J\',K:\'../4/4.K\',L:\'../4/4.L\',1p:\'../4/4.1n\'},{1m:\'#1l\',1k:\'1j% E%\',});$(\'.1i.1h-t\').2(()=>{$(\'.f-V\').W(\'d-a\')});$(\'.f-1g-b\').2(()=>{$(\'.f-V\').x(\'d-a\')});$(\'.X-1e-e\').2(()=>{$(\'.v-e\').W(\'d-a\').k({C:0,R:1},u)});$(\'.X-e-b\').2(()=>{$(\'.v-e\').k({C:\'-E%\',R:0},u).x(\'d-a\')});$(\'.16-j-15\').3(\'2\',6(){$(\'N, P\').k({q:$($(m).I(\'H\')).o().c},D);$(\'.v-e\').x(\'d-a\')});1f T=$(\'.Z-10\').o().c;$(11).12(6(){$(\'.t-O-c\')[\'13\'+($(m).q()>=T?\'14\':\'18\')](u)});$(\'.t-O-c\').3(\'2\',6(){$(\'N, P\').k({q:$($(m).I(\'H\')).o().c+\'19\'},D)});$(\'.h-g-s\').3(\'2\',6(){$(\'.B-A\').i(\'5\',6(){1a($(\'.B-A\').1b(":1d")){$(\'.h-g-s\').7(\'Згорнути\')}Y{$(\'.h-g-s\').7(\'Читати далі\')}})});$(\'.h-g-1o\').3(\'2\',()=>{$(\'.f-1q-1r\').1s(\'5\')});$(\'#8-G-F\').3(\'2\',()=>{$(\'.p-j[r-n="8-G-F"]\').i(\'5\',6(){})});$(\'#8-U\').3(\'2\',()=>{$(\'.p-j[r-n="8-U"]\').i(\'5\',6(){})});$(\'#8-Q\').3(\'2\',()=>{$(\'.p-j[r-n="8-Q"]\').i(\'5\',6(){})});$(\'.9-w\').3(\'2\',()=>{$(\'.7-l-M, .7-l-S\').y(\'5\');$(\'.9-b\').y(\'5\');$(\'.9-w\').z()});$(\'.9-b\').3(\'2\',()=>{$(\'.7-l-M, .7-l-S\').z(\'5\');$(\'.9-w\').y();$(\'.9-b\').z()});',62,92,'||click|on|video|slow|function|text|pay|trigger|grid|close|top|active|menu|contact|more|button_btn|slideToggle|item|animate|us|this|id|offset|payment__list|scrollTop|data|read|btn|500|navigation__main|open|removeClass|show|hide|advantages|belts__rest|left|700|100|receive|when|href|attr|mp4|webm|ogv|viber|html|to|body|bank|opacity|telegram|top200vh|cash|form|addClass|navigation__sprite|else|border|200vh|window|scroll|fade|In|link|navigation__menu|header|Out|px|if|is|vide|visible|mobile|let|form__btn|button_big|button|50|position|000|bgColor|png|howto|poster|form__howto|measure|toggle|page'.split('|'),0,{}))
+let instance = new vidbg('.page-header', {
+    mp4: '../video/video.mp4',
+    webm: '../video/video.webm',
+    poster: '../video/video.png', // URL or relative path to fallback image
+    overlay: false // Boolean to display the overlay or not
+}, {
+    // Attributes
+});
+$('.button.button_big-btn').click(()=>{$('.contact-form_fixed').addClass('active-grid')});
+$('.contact-form__btn-close').click(()=>{
+    $('.contact-form_fixed').removeClass('active-grid')
+});
+$('body').click((e)=> {
+    console.log(e.target.classList);
+    if (e.target.classList.contains('contact-form_fixed')) {
+        $('.contact-form_fixed').removeClass('active-grid')
+    }
+    if (!e.target.classList.contains('navigation__phone-marker')) {
+        $('.navigation__phone-numbers').hide()
+    }
+});
+$('.button.button_send-form').click(()=>{
+    $('.contact-form_fixed').removeClass('active-grid')
+});
+
+$('.navigation__sprite-mobile-menu').click(()=>{
+    $('.navigation__main-menu').addClass('active-grid').animate({
+        left:0,
+        opacity:1
+    },500)
+});
+$('.navigation__sprite-menu-close').click(()=>{
+    $('.navigation__main-menu').animate({
+        left:'-100%',
+        opacity:0
+    },500).removeClass('active-grid');
+});
+$('.navigation__menu-item-link').on('click',function () {
+    $('html, body').animate({
+        scrollTop:$($(this).attr('href')).offset().top
+    },700);
+    $('.navigation__main-menu').removeClass('active-grid');
+
+});
+$('.navigation__call').click(()=>{
+    $('.navigation__phone-numbers').toggle('slow', function () {
+        if($('.navigation__phone-numbers').is(":visible")){
+            $('.navigation__call').addClass('navigation__call-hover')
+            $('.navigation__call-arrow').removeClass('navigation__call-arrow--down');
+            $('.navigation__call-arrow').addClass('navigation__call-arrow--up');
+            $('.navigation__call-arrow').addClass('navigation__call-hover');
+
+        }else{
+            $('.navigation__call').removeClass('navigation__call-hover')
+            $('.navigation__call-arrow').addClass('navigation__call-arrow--down');
+            $('.navigation__call-arrow').removeClass('navigation__call-arrow--up');
+
+        }
+    });
+});
+
+let top200vh=$('.border-200vh').offset().top;
+$(window).scroll(function () {
+    $('.btn-to-top')['fade'+ ($(this).scrollTop() >= top200vh ? 'In': 'Out')](500)
+});
+
+$('.btn-to-top').on('click', function () {
+    $('html, body').animate({
+        scrollTop:$($(this).attr('href')).offset().top+'px'
+    },700);
+});
+$('.button_btn-more-read').on('click', function () {
+    $('.belts__rest-advantages').slideToggle('slow', function () {
+        if($('.belts__rest-advantages').is(":visible")){
+            $('.button_btn-more-read').text('Згорнути')
+        }else{
+            $('.button_btn-more-read').text('Читати далі')
+        }
+    })
+});
+$('.button_btn-more-howto').on('click', ()=>{
+    $('.contact-form__howto-measure').toggle('slow');
+});
+if(navigator.userAgent.match(/iPhone|iPad|iPod/i)){
+    console.log(navigator.userAgent);
+    $('#pay-bank').on('touchstart', ()=>{
+        $('.payment__list-item[data-id="pay-bank"]').slideToggle();
+    });
+    $('#pay-when-receive').on('touchstart',()=>{
+        $('.payment__list-item[data-id="pay-when-receive"]').slideToggle();
+    });
+    $('#pay-cash').on('touchstart',()=>{
+        $('.payment__list-item[data-id="pay-cash"]').slideToggle();
+    });
+}else{
+    $('#pay-bank').on('click',()=>{
+        $('.payment__list-item[data-id="pay-bank"]').slideToggle();
+    });
+    $('#pay-when-receive').on('click',()=>{
+        $('.payment__list-item[data-id="pay-when-receive"]').slideToggle();
+    });
+    $('#pay-cash').on('click',()=>{
+        $('.payment__list-item[data-id="pay-cash"]').slideToggle();
+    });
+}
+
+$('.trigger-open').on('click',()=>{
+    $('.text-us-viber, .text-us-telegram').show('slow');
+    $('.trigger-close').show('slow');
+    $('.trigger-open').hide();
+});
+$('.trigger-close').on('click',()=>{
+    $('.text-us-viber, .text-us-telegram').hide('slow');
+    $('.trigger-open').show();
+    $('.trigger-close').hide();
+});
