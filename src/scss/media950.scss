@@ -1,0 +1,153 @@
+@import "variables";
+@import "mixins";
+
+.page-header {
+  height: 100vh;
+  background-image: url("../video/video.png");
+  &__title{
+    @include montserratBold;
+    font-size: 42px;
+    margin-top: 25vh;
+  }
+}
+.contact-form{
+ &_mobile{
+    height: 100vh;
+  }
+}
+.contacts{
+
+  &__contacts-menu{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    width: 100%;
+  }
+  &__item:nth-child(1){
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  &__item:nth-child(2){
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  &__item:nth-child(3){
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 1;
+  }
+  &__item:nth-child(4){
+    grid-column: 1 / span 1;
+    grid-row: 4 / span 1;
+  }
+  &__item:nth-child(5){
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+  }
+
+  &__item{
+    &--map{
+      padding:0;
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 5;
+      height: 200px;
+    }
+  }
+}
+.container {
+  &_menu-grid{
+    grid-template-columns: 1fr 1fr 7fr ;
+  }
+}
+.logo{
+  order: 0;
+}
+.navigation{
+  &__call{
+    order: 1;
+    cursor: pointer;
+  }
+  &__call:hover{
+    color: $line-after-section-title;
+  }
+  &__main-menu{
+    box-shadow: none;
+    order:2;
+    opacity: 1;
+    padding: 20px 15px 0;
+    display: flex;
+    position: static;
+  }
+  &__menu-list{
+    display: grid;
+    align-content: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-gap: 10px;
+  }
+  &__menu-icon-sprite{
+    display: none;
+  }
+  &__phone-numbers{
+    left: 0;
+    width:60vw;
+  }
+  &__phone-list-item:not(:last-child){
+    border-bottom: 1px solid $light-text-or-icons;;
+  }
+  &__menu-item{
+    @include flexContainer-center;
+  }
+  &__menu-item-link:link,
+  &__menu-item-link:visited{
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.belts{
+   &__description-main-text{
+    font-size: 14px;
+  }
+}
+
+.delivery{
+  background-image: url("../img/delivery-bg.jpg");
+  background-attachment: fixed;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
+
+}
+.section-title{
+  &--big{
+    background-color: transparent;
+  }
+}
+.contact-form_inline{
+  width: 70%;
+}
+.contact-form__message--small-white-text{
+  color: $main-text-color;
+}
+.button{
+  &_btn-more-howto{
+    margin: 20px 0;
+    padding: 20px 20px;
+    width: 50%;
+    justify-self: center;
+    align-self: center;
+  }
+  &_btn-more-howto:after{
+    position: absolute;
+    top:50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+}
+
+.gallery{
+  &__container{
+    column-count: 4;
+  }
+}
+
+

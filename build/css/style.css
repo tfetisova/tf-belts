@@ -321,8 +321,6 @@ body {
     top: 0;
     left: 0;
     width: 100vw; }
-  .contact-form_inline {
-    color: #fff; }
   .contact-form_mobile {
     position: relative;
     background-color: white;
@@ -439,65 +437,24 @@ body {
   left: 0; }
 
 .belts__description-title {
-  color: #2F4143;
-  font-size: 18px;
-  text-transform: capitalize;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #2F4143;
+  font-size: 20px;
+  text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px; }
 
 .belts__description-main-text {
   font-size: 16px;
+  line-height: 1.2;
   margin-bottom: 20px; }
+
+.belts__img-container {
+  width: 100%; }
 
 .belts__slide-img {
   width: 100%; }
-
-.description-img {
-  width: 100%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-bottom: 15px; }
-  .description-img--body-2 {
-    background-image: url("../img/section-belts/200px-height/body-2.jpg"); }
-  .description-img--body-3 {
-    background-image: url("../img/section-belts/200px-height/body-3.jpg"); }
-  .description-img--body-4 {
-    background-image: url("../img/section-belts/200px-height/body-4.jpg"); }
-  .description-img--body-5 {
-    background-image: url("../img/section-belts/200px-height/body-5.jpg"); }
-  .description-img--structure-1 {
-    background-image: url("../img/section-belts/200px-height/structure-1.jpg"); }
-  .description-img--structure-2 {
-    background-image: url("../img/section-belts/200px-height/structure-2.jpg"); }
-  .description-img--structure-3 {
-    background-image: url("../img/section-belts/200px-height/structure-3.jpg"); }
-  .description-img-diagonal-joint-1 {
-    background-image: url("../img/section-belts/200px-height/diagonal-joint-1.jpg"); }
-  .description-img-diagonal-joint-2 {
-    background-image: url("../img/section-belts/200px-height/diagonal-joint-2.jpg"); }
-  .description-img-diagonal-joint-3 {
-    background-image: url("../img/section-belts/200px-height/diagonal-joint-3.jpg"); }
-  .description-img--thickness-1 {
-    background-image: url("../img/section-belts/200px-height/thickness-1.jpg"); }
-  .description-img--thickness-2 {
-    background-image: url("../img/section-belts/200px-height/thickness-2.jpg"); }
-  .description-img--antistatika-1 {
-    background-image: url("../img/section-belts/200px-height/antistatika-1.jpg"); }
-  .description-img--antistatika-2 {
-    background-image: url("../img/section-belts/200px-height/antistatika-2.jpg"); }
-  .description-img--move-mark-1 {
-    background-image: url("../img/section-belts/200px-height/move-mark-1.jpg"); }
-  .description-img--move-mark-2 {
-    background-image: url("../img/section-belts/200px-height/move-mark-1.jpg"); }
-  .description-img--move-mark-3 {
-    background-image: url("../img/section-belts/200px-height/move-mark-1.jpg"); }
-  .description-img--move-mark-4 {
-    background-image: url("../img/section-belts/200px-height/move-mark-1.jpg"); }
 
 .button_btn-more {
   padding: 10px 15px; }
@@ -527,8 +484,7 @@ body {
 .button_btn-more-howto {
   position: relative;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  padding: 20px 20px;
   width: 100%;
   background-color: #43b3c4;
   font-size: 14px; }
@@ -542,6 +498,9 @@ body {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%); }
+
+.order-belt {
+  background-color: #e5e5e5; }
 
 .order-belt input::-webkit-input-placeholder {
   color: #2F4143; }
@@ -561,6 +520,9 @@ body {
 .order-belt input::placeholder {
   color: #2F4143; }
 
+.contact-form_inline {
+  color: #153036; }
+
 .delivery {
   background-image: url("../img/delivery-bg-mobile.jpg");
   -webkit-background-size: cover;
@@ -569,6 +531,8 @@ body {
   background-size: cover;
   background-position: right center;
   background-attachment: scroll;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -579,7 +543,6 @@ body {
   padding-top: 15px;
   padding-bottom: 15px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   font-size: 32px; }
 
@@ -676,10 +639,63 @@ body {
     margin-bottom: 20px;
     padding-left: 40px; }
 
-.gallery__container {
-  -webkit-columns: 2;
-  -moz-columns: 2;
-  columns: 2; }
+.gallery {
+  background-color: #e5e5e5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .gallery__container {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 15px;
+    -moz-column-gap: 15px;
+    column-gap: 15px;
+    display: block; }
+  .gallery__img-container {
+    width: 100%;
+    margin-bottom: 15px; }
+  .gallery__img {
+    width: 100%;
+    display: block; }
+
+.gallery > .section-title {
+  margin-bottom: 30px; }
+
+.zoom-in-img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(50, 92, 130, 0.9); }
+
+.zoom-in-img > img {
+  -ms-touch-action: pinch-zoom;
+  touch-action: pinch-zoom;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 .contacts {
   padding-bottom: 80px; }
@@ -757,6 +773,8 @@ body {
     padding-left: 37.5px; }
     .contacts__item--map {
       padding-top: 20px;
-      padding-left: 0; }
-  .contacts__item > iframe {
-    width: 100%; }
+      padding-left: 0;
+      height: 300px; }
+    .contacts__item--map > iframe {
+      height: 100%;
+      width: 100%; }

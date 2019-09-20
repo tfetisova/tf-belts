@@ -34,86 +34,25 @@
     left:0;
   }
   &__description-title{
+    @include montserratBold;
     color: $subtitle-color;
-    font-size: 18px;
-    text-transform: capitalize;
-    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
     text-align: center;
     margin-bottom: 20px;
   }
   &__description-main-text{
     font-size: 16px;
+    line-height: 1.2;
     margin-bottom: 20px;
+  }
+  &__img-container{
+    width: 100%;
   }
   &__slide-img{
     width: 100%;
   }
 }
-.description-img{
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-bottom: 15px;
-    &--body-2{
-       background-image:url("../img/section-belts/200px-height/body-2.jpg");
-     }
-    &--body-3{
-      background-image:url("../img/section-belts/200px-height/body-3.jpg");
-    }
-    &--body-4{
-      background-image:url("../img/section-belts/200px-height/body-4.jpg");
-    }
-    &--body-5{
-      background-image:url("../img/section-belts/200px-height/body-5.jpg");
-    }
-    &--structure-1{
-      background-image:url("../img/section-belts/200px-height/structure-1.jpg");
-
-    }
-    &--structure-2{
-      background-image:url("../img/section-belts/200px-height/structure-2.jpg");
-
-    }
-    &--structure-3{
-      background-image:url("../img/section-belts/200px-height/structure-3.jpg");
-
-    }
-    &-diagonal-joint-1{
-      background-image: url("../img/section-belts/200px-height/diagonal-joint-1.jpg");
-    }
-    &-diagonal-joint-2{
-      background-image: url("../img/section-belts/200px-height/diagonal-joint-2.jpg");
-    }
-    &-diagonal-joint-3{
-      background-image: url("../img/section-belts/200px-height/diagonal-joint-3.jpg");
-    }
-    &--thickness-1{
-      background-image: url("../img/section-belts/200px-height/thickness-1.jpg");
-    }
-    &--thickness-2{
-      background-image: url("../img/section-belts/200px-height/thickness-2.jpg");
-    }
-    &--antistatika-1{
-       background-image: url("../img/section-belts/200px-height/antistatika-1.jpg");
-     }
-    &--antistatika-2{
-      background-image: url("../img/section-belts/200px-height/antistatika-2.jpg");
-    }
-    &--move-mark-1{
-      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
-    }
-    &--move-mark-2{
-      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
-    }
-    &--move-mark-3{
-      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
-    }
-    &--move-mark-4{
-      background-image: url("../img/section-belts/200px-height/move-mark-1.jpg");
-    }
-  }
-
 .button{
   &_btn-more{
     padding: 10px 15px;

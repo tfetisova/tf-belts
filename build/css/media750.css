@@ -4,6 +4,9 @@ html {
 .page-header__title {
   margin-top: 20vh; }
 
+.page-header__scroll {
+  margin-bottom: 10vh; }
+
 .contact-form {
   padding-top: 40px;
   padding-bottom: 20px; }
@@ -14,3 +17,100 @@ html {
     width: 50vw; }
   .contact-form__btn-close {
     top: 5px; }
+
+.belts__description-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-box-orient: horizontal;
+  -moz-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.belts__description-container:nth-child(even) > .belts__description-text {
+  -webkit-box-ordinal-group: 3;
+  -webkit-order: 2;
+  -moz-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-right: 15px; }
+
+.belts__description-title {
+  font-size: 22px;
+  text-align: left;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  overflow: hidden; }
+
+.belts__description-title:after {
+  content: '';
+  vertical-align: middle;
+  display: inline-block;
+  width: 100%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  height: 3px;
+  background-color: #f1ad1d;
+  margin-left: 15px;
+  margin-right: -100%; }
+
+.belts__description-text {
+  width: 50%; }
+
+.belts__img-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 15px;
+  width: 50%; }
+
+.delivery {
+  background-image: url("../img/delivery-bg.jpg");
+  background-attachment: scroll; }
+
+.section-title--big {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 70%;
+  background-color: rgba(0, 0, 0, 0.5); }
+
+.gallery__container {
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  column-count: 3; }
+
+.zoom-in-img {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(50, 92, 130, 0.9); }
+
+.zoom-in-img > img {
+  -ms-touch-action: pinch-zoom;
+  touch-action: pinch-zoom;
+  position: absolute;
+  height: 100%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }

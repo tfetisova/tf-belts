@@ -1,5 +1,42 @@
 .gallery{
+  background-color: #e5e5e5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   &__container{
-    columns: 2;
+    column-count: 2;
+    column-gap: 15px;
+    display: block;
+
   }
+  &__img-container{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &__img{
+    width: 100%;
+    display: block;
+  }
+}
+.gallery>.section-title{
+  margin-bottom: 30px;
+}
+
+.zoom-in-img{
+  position: fixed;
+  top:0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: rgba(50, 92, 130, 0.9);
+
+}
+.zoom-in-img>img{
+  touch-action: pinch-zoom;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
 }

@@ -60,10 +60,12 @@
     &--map{
       padding-top: 20px;
       padding-left: 0;
+      height: 300px;
     }
-  }
-  &__item>iframe{
-    width: 100%;
+    &--map>iframe{
+      height: 100%;
+      width: 100%;
+    }
   }
 }
 
