@@ -1,0 +1,21 @@
+@import "variables";
+@import "mixins";
+.contact-form{
+  &_mobile{
+    height: auto;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+  }
+}
+.navigation{
+  &__menu-item-link{
+    line-height: 1.5;
+  }
+}
+.gallery{
+  &__container{
+    column-count: 5;
+  }
+}
+
+

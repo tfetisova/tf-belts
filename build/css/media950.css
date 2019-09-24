@@ -10,6 +10,9 @@
 .contact-form_mobile {
   height: 100vh; }
 
+.contact-form_fixed {
+  height: 100vh; }
+
 .contacts__contacts-menu {
   display: grid;
   grid-template-columns: 1fr 1fr;

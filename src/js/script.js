@@ -1,11 +1,14 @@
 let instance = new vidbg('.page-header', {
     mp4: '../video/video.mp4',
     webm: '../video/video.webm',
-    poster: '../video/video.png', // URL or relative path to fallback image
+    poster: '../video/video.png',
     overlay: false // Boolean to display the overlay or not
 }, {
     // Attributes
 });
+
+
+
 $('.button.button_big-btn').click(()=>{$('.contact-form_fixed').addClass('active-grid')});
 $('.contact-form__btn-close').click(()=>{
     $('.contact-form_fixed').removeClass('active-grid')
@@ -122,6 +125,29 @@ $('.trigger-close').on('click',()=>{
 $('.gallery__img').on('click',function(e) {
     $(this).parent().toggleClass('zoom-in-img');
 });
+
+let lazyItem = [...document.querySelectorAll('.lazy-load')];
+let inAdvance = 200;
+
+function lazyLoad() {
+    lazyItem.forEach(item => {
+        if (item.offsetTop < window.innerHeight + window.pageYOffset + inAdvance) {
+            item.src = item.dataset.src;
+            item.onload = () => item.classList.add('loaded')
+        }
+    });
+}
+lazyLoad();
+window.addEventListener('scroll', ()=> {
+    let loadedLazy = [...document.querySelectorAll('.loaded')];
+    if (loadedLazy.length >= 27) {
+        window.removeEventListener('scroll', lazyLoad);
+        window.removeEventListener('resize', lazyLoad);
+
+    }
+});
+window.addEventListener('scroll', lazyLoad);
+window.addEventListener('resize', lazyLoad);
 
 
 

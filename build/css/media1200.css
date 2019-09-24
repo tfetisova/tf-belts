@@ -1,0 +1,12 @@
+.contact-form_mobile {
+  height: auto;
+  margin-top: 15vh;
+  margin-bottom: 15vh; }
+
+.navigation__menu-item-link {
+  line-height: 1.5; }
+
+.gallery__container {
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  column-count: 5; }

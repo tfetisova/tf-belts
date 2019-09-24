@@ -11,7 +11,10 @@
   }
 }
 .contact-form{
- &_mobile{
+  &_mobile{
+    height: 100vh;
+  }
+  &_fixed{
     height: 100vh;
   }
 }

@@ -294,7 +294,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     text-decoration: none; }
-  .navigation__phone-list-item:first-child {
+  .navigation__phone-list-item:not(:last-child) {
     border-bottom: 1px solid #abbbbe; }
   .navigation__menu-item-link:link, .navigation__menu-item-link:visited {
     display: block;
@@ -778,3 +778,14 @@ body {
     .contacts__item--map > iframe {
       height: 100%;
       width: 100%; }
+
+.lazy-load {
+  opacity: 0.1;
+  will-change: opacity;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.lazy-load.loaded {
+  opacity: 1; }

@@ -103,7 +103,7 @@
       padding-bottom: 15px;
       text-decoration: none;
     }
-    &__phone-list-item:first-child{
+    &__phone-list-item:not(:last-child){
       border-bottom: 1px solid $light-text-or-icons;;
   }
     &__menu-item-link:link,
